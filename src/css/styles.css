@@ -31,6 +31,10 @@
   max-width: 75px;
 }
 
+.form {
+  min-width: 320px;
+  max-width: 375px;
+}
 .timer {
   display: flex;
   gap: 24px;

@@ -23,15 +23,11 @@ const options = {
   minuteIncrement: 1,
 
   onClose(selectedDates) {
-    if (!selectedDates.length) {
-      startBtn.disabled = true;
-      return;
-    }
+    if (!selectedDates.length) return;
 
     const selectedDate = selectedDates[0];
-    const now = new Date();
 
-    if (selectedDate.getTime() <= now.getTime()) {
+    if (selectedDate <= new Date()) {
       iziToast.error({
         title: 'Error',
         message: 'Please choose a date in the future',
@@ -45,26 +41,6 @@ const options = {
     userSelectedDate = selectedDate;
     startBtn.disabled = false;
   },
-
-  // onClose(selectedDates) {
-  //   if (!selectedDates.length) return;
-
-  //   const selectedDate = selectedDates[0];
-
-  //   if (selectedDate <= new Date()) {
-  //     iziToast.error({
-  //       title: 'Error',
-  //       message: 'Please choose a date in the future',
-  //       position: 'topRight',
-  //     });
-
-  //     startBtn.disabled = true;
-  //     return;
-  //   }
-
-  //   userSelectedDate = selectedDate;
-  //   startBtn.disabled = false;
-  // },
 
   // onClose(selectedDates) {
   //   const selectedDate = selectedDates[0];
