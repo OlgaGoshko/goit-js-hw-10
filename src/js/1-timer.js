@@ -41,24 +41,6 @@ const options = {
     userSelectedDate = selectedDate;
     startBtn.disabled = false;
   },
-
-  // onClose(selectedDates) {
-  //   const selectedDate = selectedDates[0];
-
-  //   if (selectedDate <= new Date()) {
-  //     iziToast.error({
-  //       title: 'Error',
-  //       message: 'Please choose a date in the future',
-  //       position: 'topRight',
-  //     });
-
-  //     startBtn.disabled = true;
-  //     return;
-  //   }
-
-  //   userSelectedDate = selectedDate;
-  //   startBtn.disabled = false;
-  // },
 };
 
 flatpickr('#datetime-picker', options);
